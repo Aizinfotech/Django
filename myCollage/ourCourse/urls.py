@@ -7,6 +7,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('blog/', views.blog, name='blog'),
     path('courselist/', views.course_list, name='course_list'),
+    path('course_detail/', views.course_detail, name='course_detail'),
 
 
     # path('blog/<int:blog_year>/<str:blog_month>/', views.blog_detail, name='blog_detail'),

@@ -5,3 +5,4 @@ from django.shortcuts import render
 
 def aiml_student(request):
     return render(request, 'student/aiml.html')
+

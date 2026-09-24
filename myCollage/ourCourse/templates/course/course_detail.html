@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    {% comment %}
+    <ul> 
+        <li> {{ course_topics | join:", " }} </li>
+    </ul>
+    
+    <h2> {{ course_details.course }} </h2>
+    <p> {{ course_details.Description }} </p>
+    
+    {% endcomment %}
+
+    <h2> Course started at {{ start_date | date:"D M Y" }} </h2>
+    <h2> Course started at {{ start_date | time:"H:i:s" }} </h2>
+    
+    <p> {{ Description }} </p>
+    <h3> Total Sessions: {{ Total_sessions | floatformat:2 }} </h3>
+    <p> {{ Description | capfirst }} </p>
+    <p> {{ Description | upper }} </p>
+    <p> {{ Description | lower }} </p>
+    <p> {{ Description | title }} </p>
+
+</body>
+</html>
