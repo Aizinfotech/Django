@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container text-center mb-5">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is a simple home page for the Django application.</p>
+    </div>
+
+
+    <div class="row bg-secondary p-5">
+        <div class="col-md-8">
+            <h2>About Our Collage</h2>
+            <p>Our collage is dedicated to providing quality education and fostering a community of learners. We offer a variety of courses and resources to help students succeed in their academic journey.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/banner.png' %}" alt="Collage Image" class="img-fluid">
+        </div>
+    </div>
+{% endblock %}
