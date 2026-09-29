@@ -8,5 +8,6 @@ urlpatterns = [
     path('aiml/', views.aiml_student, name='aiml_student'),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
+    path('list/', views.student_list, name='student_list'),
 
 ]
