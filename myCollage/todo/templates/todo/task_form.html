@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{% if task %}Edit Task{% else %}Create New Task{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_title" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" id="id_title" value="{{ task.title}}"> 
+        </div>
+        <div class="mb-3">
+            <label for="id_description" class="form-label">Description</label>
+            <textarea name="description" class="form-control" id="id_description" rows="3">{{ task.description }}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="id_task_start_date" class="form-label">Task Start Date</label>
+            <input type="date" name="task_start_date" class="form-control" id="id_task_start_date" value="{{ today |date:'Y-m-d' }}">
+        </div>
+        <div class="mb-3">
+            <label for="id_task_end_date" class="form-label">Task End Date</label>
+            <input type="date" name="task_end_date" class="form-control" id="id_task_end_date" value="{{ task_end_date |date:'Y-m-d' }}">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" name="completed" class="form-check-input" id="id_completed" {% if task.completed %}checked{% endif %}>
+            <label class="form-check-label" for="id_completed">Completed</label>
+        </div> 
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{% url 'todo:task_list' %}" class="btn btn-secondary">Cancel</a>
+
+        
+    </form>
+    <a href="{% url 'todo:task_list' %}" class="btn btn-secondary mt-2">Back to Task List</a>
+{% endblock %}
