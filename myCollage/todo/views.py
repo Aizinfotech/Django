@@ -27,8 +27,8 @@ def task_update(request, pk):
     if request.method == 'POST':
         task.title = request.POST.get('title')
         task.description = request.POST.get('description')
-        today = request.POST.get('task_start_date')
-        task_end_date = request.POST.get('task_end_date')
+        task.task_start_date = request.POST.get('task_start_date')
+        task.task_end_date = request.POST.get('task_end_date')
         task.completed = 'completed' in request.POST
         task.save()
         return redirect(reverse('todo:task_list'))

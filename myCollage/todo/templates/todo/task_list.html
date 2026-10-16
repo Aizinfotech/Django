@@ -21,7 +21,9 @@
                     <td>{{ task.id }}</td>
                     <td>{{ task.title }}</td>
                     <td>{{ task.description }}</td>
-                    <td>{{ task.task_start_date }}</td>
+                    <td>
+                        {{ task.task_start_date }}
+                    </td>
                     <td>{{ task.task_end_date }}</td>
                     <td>
                         <form method="post" action="{% url 'todo:task_toggle' task.pk %}">

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ourCourse',
     'ourstudents',
     'todo',
+    'blog',
 ]
 
 MIDDLEWARE = [
