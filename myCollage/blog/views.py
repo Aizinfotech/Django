@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Post
 from django.core.paginator import Paginator
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -11,3 +12,7 @@ def post_list(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'blog/post_list.html', {'page_obj': page_obj})
+
+
+def welcome(request):
+    return HttpResponse("Welcome to Milldelware Session")
