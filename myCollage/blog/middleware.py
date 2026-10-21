@@ -16,7 +16,7 @@ class SimpleLogMiddleware(MiddlewareMixin):
 
 
 class BlockIPMiddleware(MiddlewareMixin):
-    BLOCKED_IPS = ['127.0.0.1']  
+    BLOCKED_IPS = ['127.0.0.3']  
 
     def process_request(self, request):
         ip = request.META.get('REMOTE_ADDR')

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ourstudents',
     'todo',
     'blog',
+    'shop',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'blog.middleware.SimpleLogMiddleware',
     'blog.middleware.BlockIPMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'myCollage.urls'
