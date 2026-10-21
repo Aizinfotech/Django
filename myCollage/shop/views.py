@@ -28,3 +28,4 @@ def delete_session(request):
     # 2
     request.session.flush() # this will delet all session data
     return HttpResponse("Session data deleted successfully.")
+
