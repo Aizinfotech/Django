@@ -136,3 +136,17 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+
+
+
+# mail setting
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+# EMAIL_HOST_USER = 'moinuddinbavan@gmail.com'
+# EMAIL_HOST_PASSWORD = '[gwzy fplm dlwu ldgw]' # Change to your Gmail password or App Password
+# DEFAULT_FROM_EMAIL = '[EMAIL_ADDRESS]'
