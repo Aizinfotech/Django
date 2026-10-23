@@ -11,5 +11,8 @@ urlpatterns = [
     path('list/', views.student_list, name='student_list'),
     path('contact/', views.contact_form, name='contact_form'),
     path('submit_contact/', views.submit_contact, name='submit_contact'),
+
+
+    path('send-email/', views.send_test_email, name="send_test_email"),
     
 ]

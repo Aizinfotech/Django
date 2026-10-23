@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>Send Email</h1>
+
+<form method="POST">
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label> Receiver Email </label>
+    <input type="email" name="email" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label> Subject </label>
+
+    <input type="text" name="subject" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label> Message </label>
+
+    <textarea name="message" class="form-control" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send Email</button>
+</form>
+
+{% endblock %}
